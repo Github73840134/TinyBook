@@ -226,3 +226,7 @@ All-in-one-go usage:
 tinybook.Book.info.chapters.total('testbook.tb')
 ```
 # The Generator
+The generator class is used for easy generation of tinybook formated data.  
+```python
+tinybook.Generator.generate
+```
