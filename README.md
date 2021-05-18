@@ -206,4 +206,23 @@ All-in-one-go usage:
 tinybook.Book.info.chapters.total('testbook.tb')
 ```
 # Reading Books
+```python
+tinybook.read
+```
+#### read(fn)
+Gets book contents
+fn must be a string  
+Returns the content of the book in a list
+There are 3 levels in the list
+Sugested Usage:
+```python
+bm = tinybook.Book
+info = bm.info
+chap = info.chapters
+chap.total('testbook.tb')
+```
+All-in-one-go usage:
+```python
+tinybook.Book.info.chapters.total('testbook.tb')
+```
 # The Generator

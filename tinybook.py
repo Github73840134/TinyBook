@@ -263,7 +263,7 @@ class read:
 		[[["Page1"]]]
 		 
 		'''
-		d = json.loads(open('test.json','r').read())
+		d = json.loads(open(fn,'r').read())
 		outbook = [[]]
 		if 'metadata' not in d:
 			raise Exception("Corrupted Book")
@@ -297,7 +297,7 @@ class read:
 		:param fn (str): Filename of tinybook
 		:param offset (int): Terminal width offset for divider line (negative number to trim back, positive to add) 
 		'''
-		d = json.loads(open('test.json','r').read())
+		d = json.loads(open(fn,'r').read())
 		outbook = ''
 		if 'metadata' not in d:
 			raise Exception("Corrupted Book")
