@@ -29,7 +29,7 @@ Version 1.0-Python 3 edition
 [7.2.5-The cover attribute (BETA)](###The-cover-attribute-(BETA))  
 [7.3-The bookdata attributes](##The-bookdata-attributes)  
 [7.3.1-The pages attribute](###The-page-format)  
-[7.3.1.1-The metadata attribute (Not in use currently)](####The-metadata-attribute-(Not-in-use-currently))  
+[7.3.1.1-The metadata attribute (Coming soon)](####The-metadata-attribute)  
 [7.3.1.2-The data attributes](####The-data-attributes)  
 [7.3.1.2.1-The h attribute](#####The-h-attribute)  
 [7.3.1.2.2-The p attribute](#####The-p-attribute)  
@@ -540,7 +540,8 @@ To begin a page in the bookdata attribute you would do
 ```
 The key in the pair being the page number  
 The value in the pair being the data in the book
-#### The metadata attribute (Not in use currently)
+#### The metadata attribute
+(Not in use currently)  
 This will be used for custom page styling. (Coming Soon)
 
 #### The data attributes
