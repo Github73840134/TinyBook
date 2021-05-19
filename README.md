@@ -19,9 +19,26 @@ Version 1.0-Python 3 edition
 [6-The Generator](#The-Generator)  
 [6.1-Generating Pages](##Generating-Pages)  
 [6.2-Generating Chapters](##Generating-Chapters)  
-[7-The Format](#The-Format) 
+[7-The Format](#The-Format)  
 [7.1-How It Works](##How-it-works)  
 [7.2-The metadata attributes](##The-metadata-attributes)  
+[7.2.1-The ver attribute](###The-ver-attribute)  
+[7.2.2-The title attribute](###The-title-attribute)  
+[7.2.3-The pages attribute](###The-pages-attribute)  
+[7.2.4-The ci attribute](###The-ci-attribute)  
+[7.2.5-The cover attribute (BETA)](###The-cover-attribute-(BETA))  
+[7.3-The bookdata attributes](##The-bookdata-attributes)  
+[7.3.1-The pages attribute](###The-page-format)  
+[7.3.1.1-The metadata attribute (Not in use currently)](####The-metadata-attribute-(Not-in-use-currently))  
+[7.3.1.2-The data attributes](####The-data-attributes)  
+[7.3.1.2.1-The h attribute](#####The-h-attribute)  
+[7.3.1.2.2-The p attribute](#####The-p-attribute)  
+[7.3.1.2.3-The t attribute](#####The-t-attribute)  
+[8-Examples](#Examples)
+[9-A Testbook](#A-Testbook)
+[10-Plans for the future](#Plans-for-the-future)
+[10.1-Feature Updates](##Feature-Updates)  
+[10.2-Porting](##Porting)  
 # What is TinyBook
 Tiny book is a ebook format thats meant ot be small and work across multiple platforms. It strives to beat the ebook format
 
@@ -531,7 +548,7 @@ The data attributes contain the content of the page in the book
 ```json
 "data": {}
 ```
-##### The h attributes
+##### The h attribute
 ```json
 "h": "Heading"
 ```
@@ -552,7 +569,7 @@ The first heading will result in:
 ```
 Heading
 ```
-##### The p attributes
+##### The p attribute
 ```json
 "p": "paragraph"
 ```
@@ -573,7 +590,7 @@ The first paragraph will result in:
 ```
 paragraph
 ```
-##### The t attributes
+##### The t attribute
 ```json
 "t": "text"
 ```
@@ -599,7 +616,7 @@ You can find examples in the examples folder
 Copy and paste the code in the examples to your current directory
 # A Testbook
 A test book file is included in the repository.  
-# Plans for the Future
+# Plans for the future
 ## Feature Updates
 - Adding ability to style page elements.
 - Adding ability to add images to pages.
