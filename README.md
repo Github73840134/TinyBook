@@ -18,7 +18,7 @@ Version 1.0-Python 3 edition
 [5-Reading Books](##Reading-Books)  
 [6-The Generator](#The-Generator)  
 [6.1-Generating Pages](##Generating-Pages)  
-[6.2-Generating Chapters](##Generating-Chapters) 
+[6.2-Generating Chapters](##Generating-Chapters)  
 [7-The Format](#The-Format) 
 # What is TinyBook
 Tiny book is a ebook format thats meant ot be small and work across multiple platforms. It strives to beat the ebook format
