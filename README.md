@@ -20,6 +20,8 @@ Version 1.0-Python 3 edition
 [6.1-Generating Pages](##Generating-Pages)  
 [6.2-Generating Chapters](##Generating-Chapters)  
 [7-The Format](#The-Format) 
+[7.1-How It Works](##How-it-works)  
+[7.2-The metadata attributes](##The-metadata-attributes)  
 # What is TinyBook
 Tiny book is a ebook format thats meant ot be small and work across multiple platforms. It strives to beat the ebook format
 
@@ -119,7 +121,7 @@ Adds a page to the book
 page_num must be an int   
 data must be a tinybook dict  
 Refer to the [Generator Class](#The-Generator) for easy generation of chapters.
-Refer to [The Page Format](##The-page-format) for doing it the less easy way  
+Refer to [The Page Format](###The-page-format) for doing it the less easy way  
 Sugested Usage:
 ```python
 c = {'h':'This is is a heading','t':'thiss is text'}
@@ -596,6 +598,7 @@ text
 You can find examples in the examples folder
 Copy and paste the code in the examples to your current directory
 # A Testbook
+A test book file is included in the repository.  
 # Plans for the Future
 ## Feature Updates
 - Adding ability to style page elements.
