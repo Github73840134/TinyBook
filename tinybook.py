@@ -1,6 +1,8 @@
 '''TinyBook'''
 import json
 import os
+__version__ = '1.0'
+info = '©2021 Seth Edwards.'
 book = {}
 class makebook:
 	'''
@@ -335,4 +337,3 @@ class read:
 				outbook += '-'
 			outbook += '\n'
 		return outbook
-
