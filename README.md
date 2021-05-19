@@ -34,9 +34,9 @@ Version 1.0-Python 3 edition
 [7.3.1.2.1-The h attribute](#####The-h-attribute)  
 [7.3.1.2.2-The p attribute](#####The-p-attribute)  
 [7.3.1.2.3-The t attribute](#####The-t-attribute)  
-[8-Examples](#Examples)
-[9-A Testbook](#A-Testbook)
-[10-Plans for the future](#Plans-for-the-future)
+[8-Examples](#Examples)  
+[9-A Testbook](#A-Testbook)  
+[10-Plans for the future](#Plans-for-the-future)  
 [10.1-Feature Updates](##Feature-Updates)  
 [10.2-Porting](##Porting)  
 # What is TinyBook
