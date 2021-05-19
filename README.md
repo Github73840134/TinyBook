@@ -10,7 +10,7 @@ Version 1.0-Python 3 edition
 [1"What is TinyBook](##What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
 [3:Making Books](#Making-Books)  
-[4:Metadata](##Metadata)  
+[4:Metadata](#metadata)  
 [5:Making Pages](##Making-Pages)  
 [6:Making the book](##Making-the-book)  
 [7:Gathering book info](##Gathering-book-info)  
