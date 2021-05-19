@@ -51,7 +51,7 @@ import tinybook
 ```python
 tinybook.makebook.metadata
 ```
-Any metadata object that is called will create the metadata attribute of the book f it hasnt been added already
+Any metadata object that is called will create the metadata attribute of the book if it hasnt been added already
 #### title(title)
 Adds a title to the book  
 title must be a string  
@@ -63,10 +63,10 @@ md.title('Book Title')
 ```
 All-in-one-go usage:
 ```python
-tinybook.makebook.metadata.title('Boook Title')
+tinybook.makebook.metadata.title('Book Title')
 ```
 #### version(ver)
-Sets the book metadata verson  
+Sets the book metadata version  
 At this time there is only one version (1.0)
 version must be int  
 Sugested Usage:
@@ -115,7 +115,7 @@ img_dta must be ascii encoded bytes
 img_type must be string  
 img_type options:    
 'bmp' Bitmap file  
-'png' Portable Network Graphics (.png) File    
+'png' Portable Network Graphics (.png) file    
 Sugested Usage:
 ```python
 file = open('test.bmp','rb')
@@ -141,7 +141,7 @@ Refer to the [Generator Class](#The-Generator) for easy generation of chapters.
 Refer to [The Page Format](###The-page-format) for doing it the less easy way  
 Sugested Usage:
 ```python
-c = {'h':'This is is a heading','t':'thiss is text'}
+c = {'h':'This is is a heading','t':'this is text'}
 bm = tinybook.makebook
 md = bm.add
 md.page(1,c)
@@ -156,8 +156,8 @@ tinybook.makebook
 ```
 #### make(bookname)
 Compile the book to a tinybook file  
-name msut be str (do not add extention to the file name)  
-Use this when you have compelted making your book
+name must be str (do not add an extention to the file name)  
+Use this when you have completed making your book
 Sugested Usage:
 ```python
 bm = tinybook.makebook
@@ -174,7 +174,7 @@ tinybook.Book.info
 #### title(fn)
 Get the title from the book file  
 fn must be a string  
-Returns the books title as a string
+Returns the book's title as a string
 Sugested Usage:
 ```python
 bm = tinybook.Book
