@@ -2,7 +2,9 @@
 import json
 import os
 __version__ = '1.0'
-info = '©2021 Seth Edwards.'
+__info__ = '©2021 Seth Edwards.'
+__metadata_ver__ = '1.0'
+
 book = {}
 class makebook:
 	'''
