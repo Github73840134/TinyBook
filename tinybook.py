@@ -4,7 +4,7 @@ import os
 __version__ = '1.0'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
-
+__port__ = 'CPython'
 book = {}
 class makebook:
 	'''
