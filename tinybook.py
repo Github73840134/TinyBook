@@ -285,7 +285,7 @@ class read:
 			outbook[ticker].append([])
 			for t in d['bookdata'][pages[i]]['data']:
 				if 'h' in t:
-					outbook[ticker][i].append(d['bookdata'][pages[i]]['data'][t]+'\n\n')
+					outbook[ticker][i].append('\u001b[1m'+d['bookdata'][pages[i]]['data'][t]+'\u001b[0m\n\n')
 				if 'p' in t:
 					outbook[ticker][i].append('\t'+d['bookdata'][pages[i]]['data'][t]+'\n')
 				if 't' in t:
