@@ -289,7 +289,6 @@ class read:
 		cpages = list(d['metadata']['ci'])
 		ticker = 0
 		for i in range(len(pages)):
-			print(i)
 			outbook[ticker].append([])
 			for t in d['bookdata'][pages[i]]['data']:
 				if 'h' in t:
