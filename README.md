@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0-Python 3 edition
+Version 1.0.1-Python 3 edition
 
 
 ## Requirements:
@@ -7,7 +7,7 @@ Version 1.0-Python 3 edition
 ## Tinybook info
 - Latest Metadata Version is 1.0
 # Table of contents
-[1"What is TinyBook](#What-is-TinyBook)  
+[1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
 [3:Making Books](#Making-Books)  
 [4:Metadata](#metadata)  
