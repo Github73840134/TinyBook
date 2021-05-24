@@ -1,7 +1,8 @@
 # TinyBook Documentation
 Version 1.0.1-Python 3 edition
 
-
+# IMPORTANT MAJOR BUG
+tinybook.read.read() is not returning its data properly. We are working on this issue right now.
 ## Requirements:
 - A complete install Python 3 or newer
 ## Tinybook info
