@@ -2,9 +2,10 @@
 Version 1.0.1-Python 3 edition
 
 # IMPORTANT MAJOR BUG
-tinybook.read.read() is not returning its data properly. We are working on this issue right now.
+tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
 ## Requirements:
 - A complete install Python 3 or newer
+### A quick side note this may work 2.7.18 and above, I have not tested it.
 ## Tinybook info
 - Latest Metadata Version is 1.0
 # Table of contents
@@ -40,6 +41,7 @@ tinybook.read.read() is not returning its data properly. We are working on this 
 [30:Plans for the future](#Plans-for-the-future)  
 [31:Feature Updates](#Feature-Updates)  
 [32:Porting](#Porting)  
+[33:License](#License)
 # What is TinyBook
 Tiny book is a ebook format thats meant ot be small and work across multiple platforms. It strives to beat the ebook format
 
@@ -60,11 +62,11 @@ Sugested Usage:
 ```python
 bm = tinybook.makebook
 md = bm.metadata
-md.title('Book Title')
+md.title('Abbreviations of today')
 ```
 All-in-one-go usage:
 ```python
-tinybook.makebook.metadata.title('Book Title')
+tinybook.makebook.metadata.title('Abbreviations of today')
 ```
 #### version(ver)
 Sets the book metadata version  
@@ -418,7 +420,7 @@ tinybook.Generator.generate.chapters([page_number,chapter_title])
 # The Format
 The formats tinybooks are written in are nothing special, It just a json file. It's contents however are different.
 
-In this chapter of the Documentation we will go over on how the format is made and used.  
+In this chapter of the documentation we will go over on how the format is made and used.  
 Cool thing, this documentation will be made in a tinybook format soon
 
 
@@ -622,9 +624,29 @@ A test book file is included in the repository.
 ## Feature Updates
 - Adding ability to style page elements.
 - Adding ability to add images to pages.
+- Fixing term_ready() command
+- Ability to self update
+- Ability to download via a socket connection
+- More PORTS
 ## Porting:
+In order of importance
 - Micropython
+- Rust
+- C/C++
+- Javascript
+- Java
+# License
+*Also available in the library with tinybook.\__license__*
 
-You have made it to the end of the documentation!
-Happy Reading!  
+©2021 Seth Edwards
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+# You have made it to the end of the documentation!
+Happy Reading and Bookmaking!  
+
+This book was produced by typing on keyboards  
+
 ©2021 Seth Edwards

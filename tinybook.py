@@ -300,6 +300,7 @@ class read:
 			if str(i+2) in cpages:
 				ticker += 1
 				outbook.append([[]])
+		print(outbook)
 		return outbook
 	@staticmethod
 	def term_ready(fn,offset=-17):
