@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0.1-Python 3 edition
+Version 1.0.3-Python 3 edition
 
 # IMPORTANT MAJOR BUG
 tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
@@ -631,8 +631,6 @@ A test book file is included in the repository.
 - Adding ability to style page elements.
 - Adding ability to add images to pages.
 - Fixing term_ready() command
-- Ability to self update
-- Ability to download via a socket connection
 - More PORTS
 ## Porting:
 In order of importance
