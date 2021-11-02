@@ -422,7 +422,8 @@ tinybook.Generator.generate.chapters([page_number,chapter_title])
 ```python
 tinybook.update()
 ```
-Use this command to update the library and readme
+Use this command to update the library and readme  
+*This only works with python version 3.5.9 and above*
 # The Format
 The formats tinybooks are written in are nothing special, It just a json file. It's contents however are different.
 
