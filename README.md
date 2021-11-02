@@ -8,6 +8,10 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 ### A quick side note this may work 2.7.18 and above, I have not tested it.
 ## Tinybook info
 - Latest Metadata Version is 1.0
+## Release Notes
+-Added self updating  
+-Added release notes section  
+-Added release notes variable to the library, see the same notes via tinybook.\_\_releasenotes\_\_
 # Table of contents
 [1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
@@ -564,7 +568,7 @@ The data attributes contain the content of the page in the book
 "h": "Heading"
 ```
 The heading attribute tells the application that this parts of text is a heading.  
-If you want to you add multiple headings to the page add extra characters after the h to differenciate the headings, if you dont, the last instance of the headings with the same key 'h', Will become the first heading, An Example:  
+If you want to you add multiple headings to the page add extra characters after the h to differenciate the headings, if you dont, the last instance of the headings with the same key 'h', will become the first heading, An Example:  
 ```json
 "data":{"h":"Heading","h":"Another Heading"}
 ```
@@ -585,7 +589,7 @@ Heading
 "p": "paragraph"
 ```
 The paragraph attribute tells the application that this parts of text is a paragraph.  
-If you want to you add multiple paragraphs to the page add extra characters after the h to differenciate the paragraphs, if you dont, the last instance of the paragraphs with the same key 'p', Will become the first paragraph, An Example:  
+If you want to you add multiple paragraphs to the page add extra characters after the h to differenciate the paragraphs, if you dont, the last instance of the paragraphs with the same key 'p', will become the first paragraph, An Example:  
 ```json
 "data":{"p":"paragraph","p":"Another paragraph"}
 ```
@@ -606,7 +610,7 @@ paragraph
 "t": "text"
 ```
 The text attribute tells the application that this parts of text is a text.  
-If you want to you add multiple texts to the page add extra characters after the 't' to differenciate the texts, if you dont, the last instance of the texts with the same key 't', Will become the first text, An Example:  
+If you want to you add multiple texts to the page add extra characters after the 't' to differenciate the texts, if you dont, the last instance of the texts with the same key 't', will become the first text, An Example:  
 ```json
 "data":{"t":"text","t":"Another text"}
 ```
@@ -641,7 +645,7 @@ In order of importance
 - Javascript
 - Java
 # License
-*Also available in the library with tinybook.\__license__*
+*Also available in the library with tinybook.\_\_license\_\_*
 
 ©2021 Seth Edwards
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
