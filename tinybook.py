@@ -3,6 +3,7 @@ import json
 import os
 import socket
 import urllib.request
+import sys
 import time
 __version__ = '1.0.3'
 __info__ = '©2021 Seth Edwards.'
@@ -351,6 +352,8 @@ class read:
 			outbook += '\n'
 		return outbook
 def update():
+	if sys.version_info[0] < 3:
+    raise Exception("Must be using Python 3.5 or above to use this function")
 	print("Connecting to server")
 	s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/')
 	print("Connected")
