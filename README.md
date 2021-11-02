@@ -40,7 +40,7 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 [29:A Testbook](#A-Testbook)  
 [30:Plans for the future](#Plans-for-the-future)  
 [31:Feature Updates](#Feature-Updates)  
-[32:Porting](#Updating-the-library)  
+[32:Updating the library](#Updating-the-library)  
 [33:Porting](#Porting)  
 [34:License](#License)
 # What is TinyBook
