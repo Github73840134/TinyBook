@@ -40,8 +40,9 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 [29:A Testbook](#A-Testbook)  
 [30:Plans for the future](#Plans-for-the-future)  
 [31:Feature Updates](#Feature-Updates)  
-[32:Porting](#Porting)  
-[33:License](#License)
+[32:Porting](#Updating-the-library)  
+[33:Porting](#Porting)  
+[34:License](#License)
 # What is TinyBook
 Tiny book is a ebook format thats meant ot be small and work across multiple platforms. It strives to beat the ebook format
 
@@ -417,6 +418,11 @@ All-in-one-go usage:
 ```python
 tinybook.Generator.generate.chapters([page_number,chapter_title])
 ```
+# Updating the library
+```python
+tinybook.update()
+```
+Use this command to update the library and readme
 # The Format
 The formats tinybooks are written in are nothing special, It just a json file. It's contents however are different.
 

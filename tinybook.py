@@ -1,7 +1,10 @@
 '''TinyBook'''
 import json
 import os
-__version__ = '1.0.1'
+import socket
+import urllib.request
+import time
+__version__ = '1.0.3'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
@@ -347,3 +350,36 @@ class read:
 				outbook += '-'
 			outbook += '\n'
 		return outbook
+def update():
+	print("Connecting to server")
+	s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/')
+	print("Connected")
+	dt = s.read().decode('utf-8')
+	length = len(dt)
+	print("Update size:",length,'bytes')
+	datastr = ''
+	op = 0
+	for i in range(0,length):
+		if round(((i+1)/length)*100) != op:
+			print("\u001b[1000D\u001b[2KDownloading",str(round(((i+1)/length)*100))+'%',end='',flush=True)
+			op = round(((i+1)/length)*100)
+		time.sleep(0.00001)
+		datastr += dt[i]
+	data = json.loads(datastr)
+	print("Starting update")
+	file = open('tinybook.py','w+')
+	for i in range(0,len(data['lib'])):
+		if round(((i+1)/len(data['lib']))*100) != op:
+			print("\u001b[1000D\u001b[2KUpdating Library",str(round(((i+1)/len(data['lib']))*100))+'%',end='',flush=True)
+			op = round(((i+1)/len(data['lib']))*100)
+		file.write(data['lib'][i])
+		time.sleep(0.00001)
+	file.close()
+	file = open('README.md','w+')
+	for i in range(0,len(data['readme'])):
+		if round(((i+1)/len(data['readme']))*100) != op:
+			print("\u001b[1000D\u001b[2KUpdating README",str(round(((i+1)/len(data['readme']))*100))+'%',end='',flush=True)
+			op = round(((i+1)/len(data['readme']))*100)
+		file.write(data['readme'][i])
+		time.sleep(0.00001)
+	file.close()
