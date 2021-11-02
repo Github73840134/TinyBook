@@ -353,7 +353,7 @@ class read:
 		return outbook
 def update():
 	if sys.version_info[0] < 3:
-    raise Exception("Must be using Python 3.5 or above to use this function")
+		raise Exception("Must be using Python 3.5 or above to use this function")
 	print("Connecting to server")
 	s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/')
 	print("Connected")
