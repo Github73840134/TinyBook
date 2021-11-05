@@ -495,3 +495,4 @@ def update():
 			except:
 				pass
 			file.close()
+		print('')
