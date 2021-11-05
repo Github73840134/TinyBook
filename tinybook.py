@@ -461,6 +461,8 @@ def update():
 		file.write(data['readme'][i])
 		time.sleep(0.00001)
 	ud = json.loads(data['example'])
+	print(ud)
+	exit()
 	for i in ud['data']:
 		if ud['data'][i]['action'] == '+d':
 			try:
