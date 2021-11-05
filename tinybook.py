@@ -426,7 +426,7 @@ def update():
 	print("Connected")
 	if dt != __version__:
 		print("Updating Version...")
-		s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/cv')
+		s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/')
 	else:
 		print("No updates available.")
 		return
