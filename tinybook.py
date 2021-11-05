@@ -452,14 +452,15 @@ def update():
 		file.write(data['lib'][i])
 		time.sleep(0.00001)
 	file.close()
-	print('')
+	print('Giving System a 15 second rest')
+	time.sleep(15)
 	file = open('README.md','w+')
 	for i in range(0,len(data['readme'])):
 		if round(((i+1)/len(data['readme']))*100) != op:
 			print("\u001b[1000D\u001b[2KUpdating README",str(round(((i+1)/len(data['readme']))*100))+'%',end='',flush=True)
 			op = round(((i+1)/len(data['readme']))*100)
 		file.write(data['readme'][i])
-		time.sleep(0.00001)
+		time.sleep(0.0001)
 	ud = json.loads(data['example'])
 	for i in ud['data']:
 		if ud['data'][i]['action'] == '+d':
@@ -477,7 +478,7 @@ def update():
 			file = open(i,'w+')
 			for c in range(0,len(ud['data'][i]['data'])):
 				file.write(ud['data'][i]['data'][c])
-				if round(((i+1)/len(data['readme']))*100) != op:
+				if round(((i+1)/len(ud['data'][i]['data']))*100) != op:
 					print("\u001b[1000D\u001b[2KUpdating "+ud['data'][i],str(round(((i+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
 				op = round(((i+1)/len(ud['data'][i]['data']))*100)
 			file.close()
