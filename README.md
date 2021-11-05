@@ -637,13 +637,14 @@ A test book file is included in the repository.
 - Adding ability to add images to pages.
 - Fixing term_ready() command
 - More PORTS
+- HTML rendering
 ## Porting:
 In order of importance
-- Micropython
-- Rust
-- C/C++
-- Javascript
-- Java
+- Micropython (Active
+- Rust (Paused)
+- C/C++ (Paused)
+- Javascript (Waiting...)
+- Java (Waiting...)
 # License
 *Also available in the library with tinybook.\_\_license\_\_*
 
