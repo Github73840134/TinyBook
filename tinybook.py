@@ -5,13 +5,11 @@ import socket
 import urllib.request
 import sys
 import time
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
-__releasenotes__ = '''- Added self updating (Only works on python 3.5.9 and above)\n
-- Added release notes section\n
-- Added release notes variable to the library, see the same notes via tinybook.__releasenotes__'''
+__releasenotes__ = '''- Added book reading in html.\n- Added book reading in markdown.'''
 __license__ = '''
 ©2021 Seth Edwards
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -354,6 +352,70 @@ class read:
 				outbook += '-'
 			outbook += '\n'
 		return outbook
+	def renderhtml(fn):
+		file = open(fn,'r')
+		d = json.loads(file.read())
+		if 'metadata' not in d:
+			raise Exception("Corrupted Book")
+		if 'ci' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'pages' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'bookdata' not in d:
+			return None
+		pages = list(d['bookdata'])
+		cpages = list(d['metadata']['ci'])
+		print(pages,cpages)
+		render = '<html>\n\t'
+		for i in range(len(pages)):
+			if str(i+1) in cpages:
+				render += '<h1>'+d['metadata']['ci'][str(i+1)]+'</h1>\n\t'
+				render += '<div>\n\t'
+			for t in d['bookdata'][pages[i]]['data']:
+				if 'h' in t:
+					render += '<h2>'+d['bookdata'][pages[i]]['data'][t]+'</h2>\n\t'
+				if 'p' in t:
+					render += '<p>'+d['bookdata'][pages[i]]['data'][t]+'</p>\n\t'
+				if 't' in t:
+					render += '<div>'+d['bookdata'][pages[i]]['data'][t]+'</div>\n\t'
+			if str(i+2) in cpages:
+				render += '</div>\n\t'
+				render += '<div>Page ' + str(i+1) + ' of ' + str(len(pages)) + '</div>\n\t'
+			elif cpages[i] == cpages[len(cpages)-1]:
+				render += '</div>\n\t'
+				render += '<div>Page ' + str(i+1) + ' of ' + str(len(pages)) + '</div>\n\t'
+		render += '\b\b\b\b\b\b</html>'
+		return render
+	def rendermarkdown(fn):
+		file = open(fn,'r')
+		d = json.loads(file.read())
+		if 'metadata' not in d:
+			raise Exception("Corrupted Book")
+		if 'ci' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'pages' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'bookdata' not in d:
+			return None
+		pages = list(d['bookdata'])
+		cpages = list(d['metadata']['ci'])
+		print(pages,cpages)
+		render = ''
+		for i in range(len(pages)):
+			if str(i+1) in cpages:
+				render += '# '+d['metadata']['ci'][str(i+1)]+'  \n'
+			for t in d['bookdata'][pages[i]]['data']:
+				if 'h' in t:
+					render += '## '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 'p' in t:
+					render += d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 't' in t:
+					render += d['bookdata'][pages[i]]['data'][t]+'  \n'
+			if str(i+2) in cpages:
+				render += '###### Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+			elif cpages[i] == cpages[len(cpages)-1]:
+				render += '###### Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+		return render
 def update():
 	if sys.version_info[0] < 3 and sys.version_info[1] < 5 and sys.version_info[2] < 9:
 		raise Exception("Must be using Python 3.5 or above to use this function")

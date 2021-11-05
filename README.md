@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0.3-Python 3 edition
+Version 1.0.4-Python 3 edition
 
 # IMPORTANT MAJOR BUG
 tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
@@ -10,8 +10,8 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 - Latest Metadata Version is 1.0
 ## Release Notes
 - Added self updating \(Only works on python 3.5.9 and above\)
-- Added release notes section  
-- Added release notes variable to the library, see the same notes via tinybook.\_\_releasenotes\_\_
+- Added book reading in html.  
+- Added book reading in markdown.
 # Table of contents
 [1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
@@ -275,6 +275,14 @@ All-in-one-go usage:
 ```python
 tinybook.read.read('testbook.tb')
 ```
+#### renderhtml(fn)
+Renders your book as an html file.  
+fn must be a string  
+Returns contents of book in stringed html
+#### rendermarkdown(fn)
+Renders your book as an markdown file.  
+fn must be a string  
+Returns contents of book in stringed markdown
 # The Generator
 The generator class is used for easy generation of tinybook formated data.  
 ```python
