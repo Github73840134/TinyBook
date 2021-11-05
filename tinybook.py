@@ -5,7 +5,7 @@ import socket
 import urllib.request
 import sys
 import time
-__version__ = '1.0.4'
+__version__ = '1.0.4.1'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
