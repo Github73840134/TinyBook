@@ -455,13 +455,16 @@ def update():
 	print('\nGiving System a 15 second rest')
 	time.sleep(15)
 	file = open('README.md','w+')
+	file.close()
 	print('Giving System a 15 second rest to prevent freezing...')
 	time.sleep(15)
 	for i in range(0,len(data['readme'])):
 		if round(((i+1)/len(data['readme']))*100) != op:
 			print("\u001b[1000D\u001b[2KUpdating README",str(round(((i+1)/len(data['readme']))*100))+'%',end='',flush=True)
 			op = round(((i+1)/len(data['readme']))*100)
+		file = open('README.md','a')
 		file.write(data['readme'][i])
+		file.close()
 		time.sleep(0.0001)
 	ud = json.loads(data['example'])
 	for i in ud['data']:
