@@ -461,8 +461,6 @@ def update():
 		file.write(data['readme'][i])
 		time.sleep(0.00001)
 	ud = json.loads(data['example'])
-	print(ud)
-	exit()
 	for i in ud['data']:
 		if ud['data'][i]['action'] == '+d':
 			try:
@@ -477,8 +475,11 @@ def update():
 		if ud['data'][i]['action'] == '+':
 			print("Editing/Adding File:",i)
 			file = open(i,'w+')
-			for i in range(0,len(ud['data'][i]['data'])):
-				file.write(ud['data'][i]['data'][i])
+			for c in range(0,len(ud['data'][i]['data'])):
+				file.write(ud['data'][i]['data'][c])
+				if round(((i+1)/len(data['readme']))*100) != op:
+					print("\u001b[1000D\u001b[2KUpdating "+ud['data'][i],str(round(((i+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
+				op = round(((i+1)/len(ud['data'][i]['data']))*100)
 			file.close()
 		if ud['data'][i]['action'] == '-':
 			print("Removing file:",i)
