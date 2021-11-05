@@ -484,7 +484,7 @@ def update():
 			for c in range(0,len(ud['data'][i]['data'])):
 				file.write(ud['data'][i]['data'][c])
 				if round(((c+1)/len(ud['data'][i]['data']))*100) != op:
-					print("\u001b[1000D\u001b[2KUpdating "+ud['data'][i],str(round(((c+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
+					print("\u001b[1000D\u001b[2KUpdating",i,str(round(((c+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
 				op = round(((c+1)/len(ud['data'][i]['data']))*100)
 			file.close()
 		if ud['data'][i]['action'] == '-':
