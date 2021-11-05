@@ -14,7 +14,7 @@ def walk(ls,lst={}):
 		else:
 			print("Adding File:",i)
 			try:
-				lst[i] = {'action':'+','data':open(i,'r').read()}
+				lst['examples/'+os.path.basename(os.getcwd())+'/'+i] = {'action':'+','data':open(i,'r').read()}
 				print("File Added:",i)
 			except:
 				print("Adding File",i,"Failed")
