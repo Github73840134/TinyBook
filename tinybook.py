@@ -488,6 +488,9 @@ def update():
 					print("\u001b[1000D\u001b[2KUpdating",i,str(round(((c+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
 				op = round(((c+1)/len(ud['data'][i]['data']))*100)
 				file.close()
+				time.sleep(0.0001)
+			print("File",i,"done")
+			time.sleep(2)
 		if ud['data'][i]['action'] == '-':
 			print("Removing file:",i)
 			try:
