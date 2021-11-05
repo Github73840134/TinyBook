@@ -5,7 +5,7 @@ import socket
 import urllib.request
 import sys
 import time
-__version__ = '1.0.4.1'
+__version__ = '1.0.4.1.1'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
@@ -451,6 +451,7 @@ def update():
 		file.write(data['lib'][i])
 		time.sleep(0.00001)
 	file.close()
+	print('')
 	file = open('README.md','w+')
 	for i in range(0,len(data['readme'])):
 		if round(((i+1)/len(data['readme']))*100) != op:
