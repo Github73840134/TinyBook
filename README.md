@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0.4-Python 3 edition
+Version 1.0.4.1-Python 3 edition
 
 # IMPORTANT MAJOR BUG
 tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
