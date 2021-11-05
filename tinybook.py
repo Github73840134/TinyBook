@@ -417,11 +417,19 @@ class read:
 				render += '###### Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
 		return render
 def update():
+	global __version__
 	if sys.version_info[0] < 3 and sys.version_info[1] < 5 and sys.version_info[2] < 9:
 		raise Exception("Must be using Python 3.5 or above to use this function")
 	print("Connecting to server")
-	s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/')
+	s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/cv')
+	dt = s.read().decode('utf-8')
 	print("Connected")
+	if dt != __version__:
+		print("Updating Version...")
+		s = urllib.request.urlopen('https://tinybookdownload.sethedwards.repl.co/cv')
+	else:
+		print("No updates available.")
+		return
 	dt = s.read().decode('utf-8')
 	length = len(dt)
 	print("Update size:",length,'bytes')
