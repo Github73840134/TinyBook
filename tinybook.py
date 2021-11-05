@@ -5,7 +5,8 @@ import socket
 import urllib.request
 import sys
 import time
-__version__ = '1.0.4.1.1'
+import shutil
+__version__ = '1.0.4.1.2'
 __info__ = '©2021 Seth Edwards.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
@@ -459,4 +460,28 @@ def update():
 			op = round(((i+1)/len(data['readme']))*100)
 		file.write(data['readme'][i])
 		time.sleep(0.00001)
-	file.close()
+	ud = json.loads(data['example'])
+	for i in ud['data']:
+		if ud['data'][i]['action'] == '+d':
+			try:
+				os.mkdir(i)
+			except:
+				pass
+		if ud['data'][i]['action'] == '-d':
+			try:
+				shutil.rmtree(i)
+			except:
+				pass
+		if ud['data'][i]['action'] == '+':
+			print("Editing/Adding File:",i)
+			file = open(i,'w+')
+			for i in range(0,len(ud['data'][i]['data'])):
+				file.write(ud['data'][i]['data'][i])
+			file.close()
+		if ud['data'][i]['action'] == '-':
+			print("Removing file:",i)
+			try:
+				os.remove(i)
+			except:
+				pass
+			file.close()
