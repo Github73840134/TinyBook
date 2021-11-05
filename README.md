@@ -9,9 +9,7 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 ## Tinybook info
 - Latest Metadata Version is 1.0
 ## Release Notes
-- Added self updating \(Only works on python 3.5.9 and above\)
-- Added book reading in html.  
-- Added book reading in markdown.
+- Stopped re-downloading same version
 # Table of contents
 [1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
