@@ -482,11 +482,12 @@ def update():
 			print("Editing/Adding File:",i)
 			file = open(i,'w+')
 			for c in range(0,len(ud['data'][i]['data'])):
+				file = open(i,'a')
 				file.write(ud['data'][i]['data'][c])
 				if round(((c+1)/len(ud['data'][i]['data']))*100) != op:
 					print("\u001b[1000D\u001b[2KUpdating",i,str(round(((c+1)/len(ud['data'][i]['data']))*100))+'%',end='',flush=True)
 				op = round(((c+1)/len(ud['data'][i]['data']))*100)
-			file.close()
+				file.close()
 		if ud['data'][i]['action'] == '-':
 			print("Removing file:",i)
 			try:
