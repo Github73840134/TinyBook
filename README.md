@@ -643,7 +643,7 @@ A test book file is included in the repository.
 - Adding ability to add images to pages.
 - Fixing term_ready() command
 - More PORTS
-- HTML rendering
+- xedoc rendering
 ## Porting:
 In order of importance
 - Micropython (Active
