@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0.4.1.2-Python 3 edition
+Version 1.0.4.1.3-Python 3 edition
 
 # IMPORTANT MAJOR BUG
 tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
@@ -8,6 +8,7 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 ### A quick side note this may work 2.7.18 and above, I have not tested it.
 ## Tinybook info
 - Latest Metadata Version is 1.0
+- xedoc version is 0.1.0
 ## Release Notes
 - Fixed Bugs
 # Table of contents

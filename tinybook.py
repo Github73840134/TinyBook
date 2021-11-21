@@ -7,8 +7,8 @@ import sys
 import time
 import shutil
 import base64
-__version__ = '1.0.4.1.2'
-__xedoc_version = None
+__version__ = '1.0.4.1.3'
+__xedoc_version = '0.1.0 (2018 Edition, Oct 29 2021, 23:52:26 CEST)'
 __info__ = '©2021 Github73840134.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
@@ -581,7 +581,35 @@ class read:
 				render += '###### Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
 		return render
 	def renderxedoc(fn):
-		print("This feature is currently in development and is not available to the public yet.")
+		file = open(fn,'r')
+		d = json.loads(file.read())
+		if 'metadata' not in d:
+			raise Exception("Corrupted Book")
+		if 'ci' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'pages' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'bookdata' not in d:
+			return None
+		pages = list(d['bookdata'])
+		cpages = list(d['metadata']['ci'])
+		print(pages,cpages)
+		render = ''
+		for i in range(len(pages)):
+			if str(i+1) in cpages:
+				render += 'r a | '+d['metadata']['ci'][str(i+1)]+'  \n'
+			for t in d['bookdata'][pages[i]]['data']:
+				if 'h' in t:
+					render += 'r b | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 'p' in t:
+					render += 'r p | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 't' in t:
+					render += 'r p | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+			if str(i+2) in cpages:
+				render += 'r f | Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+			elif cpages[i] == cpages[len(cpages)-1]:
+				render += 'r f | Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+		return render
 def update():
 	global __version__
 	if sys.version_info[0] < 3 and sys.version_info[1] < 5 and sys.version_info[2] < 9:
