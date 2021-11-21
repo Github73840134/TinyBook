@@ -1,0 +1,29 @@
+		file = open(fn,'r')
+		d = json.loads(file.read())
+		if 'metadata' not in d:
+			raise Exception("Corrupted Book")
+		if 'ci' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'pages' not in d['metadata']:
+			raise Exception("Book Metadata Corrupted")
+		if 'bookdata' not in d:
+			return None
+		pages = list(d['bookdata'])
+		cpages = list(d['metadata']['ci'])
+		print(pages,cpages)
+		render = ''
+		for i in range(len(pages)):
+			if str(i+1) in cpages:
+				render += 'r a | '+d['metadata']['ci'][str(i+1)]+'  \n'
+			for t in d['bookdata'][pages[i]]['data']:
+				if 'h' in t:
+					render += 'r b | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 'p' in t:
+					render += 'r p | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+				if 't' in t:
+					render += 'r p | '+d['bookdata'][pages[i]]['data'][t]+'  \n'
+			if str(i+2) in cpages:
+				render += 'r f | Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+			elif cpages[i] == cpages[len(cpages)-1]:
+				render += 'r f | Page ' + str(i+1) + ' of ' + str(len(pages)) + '  \n'
+		return render

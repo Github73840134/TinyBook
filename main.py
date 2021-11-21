@@ -1,4 +1,5 @@
 import tinybook as tb
-
-tb.read.renderhtml('testbooki.tb')
-tb.read.rendermarkdown('testbooki.tb')
+print(tb.__credits__)
+print(tb.read.renderhtml('testbooki.tb'))
+print(tb.read.renderxedoc('testbooki.tb'))
+print(tb.read.rendermarkdown('testbooki.tb'))

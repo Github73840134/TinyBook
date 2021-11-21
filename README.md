@@ -281,6 +281,11 @@ Returns contents of book in stringed html
 Renders your book as an markdown file.  
 fn must be a string  
 Returns contents of book in stringed markdown
+#### renderxedoc(fn) (BETA)
+Courtesy of the xedoc project by RustedTerrier
+Renders your book as an xedoc file.  
+fn must be a string  
+Returns contents of book in stringed xedoc
 # The Generator
 The generator class is used for easy generation of tinybook formated data.  
 ```python
@@ -646,23 +651,31 @@ A test book file is included in the repository.
 - xedoc rendering
 ## Porting:
 In order of importance
-- Micropython (Active
+- Micropython (Active)
 - Rust (Paused)
 - C/C++ (Paused)
 - Javascript (Waiting...)
 - Java (Waiting...)
-# License
+# Licenses
+## TinyBook  
 *Also available in the library with tinybook.\_\_license\_\_*
 
-©2021 Seth Edwards
+©2021 Github73840134  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+## xedoc
+Mozilla Public License  Version 2.0  
+View the full version at: [https://codeberg.org/RustedTerrier/xedoc/src/branch/main/LICENSE](https://codeberg.org/RustedTerrier/xedoc/src/branch/main/LICENSE)
+# Notices
+## xedoc
+Format is subject to change without notice, this may break compatibility with certian xedoc renderers, I am not responsible for any issues caused rendering
 # You have made it to the end of the documentation!
 Happy Reading and Bookmaking!  
 
 This book was produced by typing on keyboards  
+Tabs are better than spaces
 
-©2021 Seth Edwards
+©2021 Github73840134
