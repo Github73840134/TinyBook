@@ -12,7 +12,7 @@ __xedoc_version = '0.1.0 (2018 Edition, Oct 29 2021, 23:52:26 CEST)'
 __info__ = '©2022 Github73840134.'
 __metadata_ver__ = '1.0'
 __port__ = 'CPython'
-__releasenotes__ = '''-Added beta xedoc support'''
+__releasenotes__ = '''- Changed dates'''
 __credits__ = {'Formats':[["xedoc","RustedTerrier","https://codeberg.org/RustedTerrier/xedoc"]],"Special Thanks":[["RustedTerrier","https://codeberg.org/RustedTerrier"]]}
 __license__ = '''
 ©2022 Github73840134

@@ -10,7 +10,7 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 - Latest Metadata Version is 1.0
 - xedoc version is 0.1.0
 ## Release Notes
-- Added beta xedoc support
+- Changed dates
 # Table of contents
 [1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
