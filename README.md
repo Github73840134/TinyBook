@@ -1,5 +1,5 @@
 # TinyBook Documentation
-Version 1.0.4.1.3-Python 3 edition
+Version 1.0.4.1.2-Python 3 edition
 
 # IMPORTANT MAJOR BUG
 tinybook.read.read() is flakey when returning its data properly. We are working on this issue right now. We haven't abandoned this!
@@ -10,7 +10,7 @@ tinybook.read.read() is flakey when returning its data properly. We are working 
 - Latest Metadata Version is 1.0
 - xedoc version is 0.1.0
 ## Release Notes
-- Fixed Bugs
+- Added beta xedoc support
 # Table of contents
 [1:What is TinyBook](#What-is-TinyBook)  
 [2:How to use the library](#How-to-use-the-library)  
@@ -661,7 +661,7 @@ In order of importance
 ## TinyBook  
 *Also available in the library with tinybook.\_\_license\_\_*
 
-©2021 Github73840134  
+©2022 Github73840134  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -679,4 +679,4 @@ Happy Reading and Bookmaking!
 This book was produced by typing on keyboards  
 Tabs are better than spaces
 
-©2021 Github73840134
+©2022 Github73840134
